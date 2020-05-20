@@ -42,6 +42,8 @@ docker build -f adhochttpd.dockerfile -t shubhamdevpura/may2020q1:v1 .
 
 
 Task 2
+
+
 write a pod file and host it k8s
 
 Create pod file named "q2.yaml" 
