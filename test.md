@@ -8,7 +8,7 @@ kind: Pod
 metadata:
   creationTimestamp: null
   labels:
-    adhoc: rhythmbhiwaniq2
+    adhoc: shubhamdevpuraq2
   name: adhocpod1
 spec:
   containers:
@@ -24,19 +24,19 @@ status: {}
 Create the pod
 
 kubectl create -f q2.yaml
-Create file for service named "q2srvrhythmbhiwani.yaml"
+Create file for service named "q2srvshubhamdevpura.yaml"
 apiVersion: v1
 kind: Service
 metadata:
-  name: q2srvrhythmbhiwani
+  name: q2srvshubhamdevpura
 spec:
   type: NodePort
   selector:
-    adhoc: rhythmbhiwaniq2
+    adhoc: shubhamdevpuraq2
   ports:
     - port: 80
       targetPort: 80
       
 Create the service
 
-kubectl create -f q2svcrhythmbhiwani.yaml
+kubectl create -f q2svcshubhamdevpura.yaml
