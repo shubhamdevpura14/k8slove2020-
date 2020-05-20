@@ -40,3 +40,65 @@ spec:
 Create the service
 
 kubectl create -f q2svcshubhamdevpura.yaml
+
+
+
+
+
+Task 5
+
+deployment create
+
+Create file named "q1dep1.yaml"
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: adhhocdeprhythmbhiwani5
+  labels:
+    adhoc: rhythmbhiwaniq5
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      adhoc: rhythmbhiwaniq5
+  template:
+    metadata:
+      labels:
+        adhoc: rhythmbhiwaniq5
+    spec:
+       containers:
+        - env:
+          - name: x
+            value: app2
+          image: rhythmbhiwani/may2020q1:v1
+          imagePullPolicy: Always
+          name: adhocpod2
+          ports:
+          - containerPort: 80
+          
+Create the deployment
+
+kubectl create -f q5dep1.yaml
+
+Create service file named "q5svcrhythmbhiwani.yaml"
+
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    adhoc: q5svcrhythmbhiwani
+  name: q5svcrhythmbhiwani
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    adhoc: rhythmbhiwaniq5
+  type: LoadBalancer
+  
+Create the service
+
+kubectl create -f q5svcrhythmbhiwani.yaml
